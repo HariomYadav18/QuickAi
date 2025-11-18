@@ -14,7 +14,6 @@ const Home = () => {
       <Testimonial />
       <Plan />
       <Footer />
-  
     </>
   );
 };

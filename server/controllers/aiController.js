@@ -22,7 +22,7 @@ export const generateArticle = async (req, res) => {
 
     if (plan !== "premium" && free_usage >= 10) {
       return res.json({
-        succes: false,
+        success: false,
         message: "Limit reached. Upgrade to continue.",
       });
     }
@@ -67,7 +67,7 @@ export const generateBlogTitle = async (req, res) => {
 
     if (plan !== "premium" && free_usage >= 10) {
       return res.json({
-        succes: false,
+        success: false,
         message: "Limit reached. Upgrade to continue.",
       });
     }
@@ -106,7 +106,7 @@ export const generateImage = async (req, res) => {
 
     if (plan !== "premium") {
       return res.json({
-        succes: false,
+        success: false,
         message: "This feature is only available for premium subscriptions",
       });
     }
@@ -148,7 +148,7 @@ export const removeImageBackground = async (req, res) => {
 
     if (plan !== "premium") {
       return res.json({
-        succes: false,
+        success: false,
         message: "This feature is only available for premium subscriptions",
       });
     }
@@ -180,7 +180,7 @@ export const removeImageObject = async (req, res) => {
 
     if (plan !== "premium") {
       return res.json({
-        succes: false,
+        success: false,
         message: "This feature is only available for premium subscriptions",
       });
     }
@@ -209,7 +209,7 @@ export const resumeReview = async (req, res) => {
 
     if (plan !== "premium") {
       return res.json({
-        succes: false,
+        success: false,
         message: "This feature is only available for premium subscriptions",
       });
     }

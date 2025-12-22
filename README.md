@@ -1,8 +1,5 @@
 # QuickAi - AI-Powered SaaS Content & Image Generation Platform 🚀
 
-[![Vercel Deployment](https://img.shields.io/badge/Vercel-Deployed-000000?style=for-the-badge![React 19](https://img.shields.io/badge/React-19-blue?style=for-the-badge&logo![Node.js](https://img.shields.io/badge/Node.js-20-green?style=for-the-badge&logo![PostgreSQL](https://img.shields.io/badge/PostgreSQL-16-purple?style=for-the-badge## ✨ **Live Demo**
-🔗 **Deployed**: [quickai-hariom.vercel.app](https://quickai-hariom.vercel.app) *(Replace with your actual URL)*
-
 ## 📱 **Screenshots**
 <div align="center">
   <img src="./screenshots/dashboard.png" width="300" alt="Dashboard"/>

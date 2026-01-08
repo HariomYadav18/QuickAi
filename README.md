@@ -318,7 +318,7 @@ For any questions or support, please contact:
 - [**Hariom Yadav**]👨🏿‍💻 | [Github](https://github.com/HariomYadav18) | [Linkedin](https://www.linkedin.com/in/hariomyadav18/) |.
 - **Email**: <hariomydv1844@gmail.com>
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/hariomyadav18/) [![@phenrysay] [![pH-7](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/HariomYadav18)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/hariomyadav18/)  [![pH-7](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/HariomYadav18)
 
 ---
 

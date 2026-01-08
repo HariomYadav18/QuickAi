@@ -1,165 +1,339 @@
-# QuickAi - AI-Powered SaaS Content & Image Generation Platform 🚀
-
-## 📱 **Screenshots**
 <div align="center">
-  <img src="./screenshots/dashboard.png" width="300" alt="Dashboard"/>
-  <img src="./screenshots/ai-generation.png" width="300" alt="AI Generation"/>
-  <img src="./screenshots/resume-analyzer.png" width="300" alt="Resume Analyzer"/>
+
+# QUICKAI ⚡
+
+AI-Powered Content Generation at Your Fingertips
+
+![Last Commit](https://img.shields.io/github/last-commit/HariomYadav18/QuickAi?style=flat-square) 
+![Languages](https://img.shields.io/github/languages/top/HariomYadav18/QuickAi?style=flat-square&color=blue)
+![License](https://img.shields.io/badge/license-ISC-blue?style=flat-square)
+![Version](https://img.shields.io/badge/version-1.0.0-success?style=flat-square)
+
+*Powered by cutting-edge technologies:*
+
+![React](https://img.shields.io/badge/React-19.1.1-61DAFB?style=flat-square&logo=react&logoColor=black)
+![Express](https://img.shields.io/badge/Express-5.1.0-000000?style=flat-square&logo=express&logoColor=white)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white)
+![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=node.js&logoColor=white)
+![OpenAI](https://img.shields.io/badge/OpenAI-412991?style=flat-square&logo=openai&logoColor=white)
+![Clerk](https://img.shields.io/badge/Clerk-6C47FF?style=flat-square&logo=clerk&logoColor=white)
+
+## LIVE - DEMO 🌐
+Visit the 👉 [_LINK 🔗_](https://quick-ai-one-zeta.vercel.app/)
+
 </div>
 
-## 🎯 **Features**
+---
 
-### 🚀 **AI-Powered Generation**
-- **Text-to-Image**: OpenAI DALL-E 3 + Gemini 2.0-Flash
-- **Content Creation**: Blog posts, social media, marketing copy
-- **AI Resume Analysis**: Instant skill-gap analysis & improvement suggestions
-- **6+ REST endpoints** with real-time progress tracking
+## Table of Contents
 
-### 🔐 **Authentication & Payments**
-- **Clerk Authentication**: Social login + email/password
-- **Razorpay Integration**: Freemium model (Free tier + Premium plans)
-- **Role-Based Access Control**: User, Premium, Admin roles
+- [Overview](#overview)
+- [Key Features](#key-features)
+- [Tech Stack](#tech-stack)
+- [Architecture](#architecture)
+- [Getting Started](#getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
+  - [Environment Variables](#environment-variables)
+- [AI Capabilities](#ai-capabilities)
+- [API Endpoints](#api-endpoints)
+- [Deployment](#deployment)
+- [Performance](#performance)
+- [Contributing](#contributing)
+- [License](#license)
+- [Support](#support)
 
-### 📊 **Analytics & Community**
-- **Real-time Dashboards**: Usage stats, generation history
-- **Community Features**: Share creations, like/vote system
-- **Cloudinary AI**: Auto-optimize + transform generated images
+---
 
-## 🛠️ **Tech Stack**
+## Overview
 
+QUICKAI is a comprehensive AI SaaS platform that provides:
+
+- 🎨 AI Image Generation and Editing
+- 📝 Intelligent Content Creation
+- 🖼️ Background Removal and Object Removal
+- ✍️ Article and Blog Title Generation
+- 👥 Community Sharing Features
+
+Built with the PERN stack (PostgreSQL, Express, React, Node.js) and integrated with OpenAI's powerful AI models.
+
+---
+
+## Key Features
+
+### 🤖 AI-Powered Tools
+- **Generate Images**: Create stunning visuals from text prompts
+- **Remove Background**: Automatic background removal from images
+- **Remove Objects**: Clean up images by removing unwanted objects
+- **Write Articles**: AI-assisted article writing
+- **Blog Titles**: Generate engaging blog post titles
+
+### 👤 User Experience
+- **Secure Authentication**: Powered by Clerk
+- **Dashboard**: Central hub for all AI tools
+- **Community**: Share and discover creations
+- **Responsive Design**: Works on all devices
+- **Real-time Processing**: Instant AI results
+
+### 🛡️ Enterprise Grade
+- **Secure File Uploads**: Cloudinary integration
+- **Scalable Architecture**: Ready for high traffic
+- **API First**: RESTful API design
+
+---
+
+## Tech Stack
+
+### Frontend (Client)
+- **React 19** - Latest React with concurrent features
+- **Vite** - Next-generation build tool
+- **Tailwind CSS** - Utility-first CSS framework
+- **Axios** - HTTP client for API calls
+- **React Router DOM** - Client-side routing
+- **Lucide React** - Beautiful icons
+- **React Hot Toast** - Notifications
+- **React Markdown** - Markdown rendering
+- **Clerk** - Authentication and user management
+
+### Backend (Server)
+- **Node.js** - JavaScript runtime
+- **Express 5** - Web framework for Node.js
+- **PostgreSQL** - Relational database (via Neon)
+- **OpenAI API** - AI model integration
+- **Cloudinary** - Image and file management
+- **Multer** - File upload handling
+- **CORS** - Cross-origin resource sharing
+
+
+### DevOps & Deployment
+- **Vercel** - Frontend deployment
+- **Neon** - PostgreSQL hosting
+- **Cloudinary** - Media CDN
+- **Clerk** - Authentication service
+
+---
+
+## Architecture
+
+```json
+QuickAI/
+├── client/                 # React Frontend
+│   ├── src/
+│   │   ├── assets/        # Static assets
+│   │   ├── components/    # Reusable components
+│   │   │   ├── AITools.jsx
+│   │   │   ├── CreationItem.jsx
+│   │   │   ├── Footer.jsx
+│   │   │   ├── Hero.jsx
+│   │   │   ├── Navbar.jsx
+│   │   │   ├── Plan.jsx
+│   │   │   ├── Sidebar.jsx
+│   │   │   └── Testimonial.jsx
+│   │   ├── pages/         # Route pages
+│   │   │   ├── BlogTitles.jsx
+│   │   │   ├── Community.jsx
+│   │   │   ├── Dashboard.jsx
+│   │   │   ├── GenerateImages.jsx
+│   │   │   ├── Home.jsx
+│   │   │   ├── Layout.jsx
+│   │   │   ├── RemoveBackground.jsx
+│   │   │   ├── RemoveObject.jsx
+│   │   │   └── WriteArticle.jsx
+│   │   └── ...           # Config files
+│
+├── server/                # Express Backend
+│   ├── configs/          # Configuration files
+│   │   ├── cloudinary.js # Cloudinary config
+│   │   ├── db.js         # Database config
+│   │   └── multer.js     # File upload config
+│   ├── controllers/      # Business logic
+│   │   ├── aiController.js
+│   │   └── userController.js
+│   ├── middlewares/      # Custom middlewares
+│   │   └── auth.js
+│   ├── routes/           # API routes
+│   │   ├── aiRoutes.js
+│   │   └── userRoutes.js
+│   └── server.js         # Server entry point
 ```
-Frontend: React 19 + Vite + Tailwind CSS + React Query
-Backend: Node.js + Express.js + Socket.IO
-Database: PostgreSQL (Primary) + Redis (Caching)
-APIs: OpenAI DALL-E 3, Gemini 2.0-Flash, Razorpay, Clerk, Cloudinary
-Deployment: Vercel (95+ Lighthouse score)
-Dev Tools: Git, GitHub Actions, ESLint, Prettier
+
+---
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js (v18 or higher)
+- npm (v8 or higher)
+- PostgreSQL database (Neon recommended)
+- OpenAI API account
+- Cloudinary account
+- Clerk account
+
+### Installation
+
+1. Clone the repository:
+```console
+git clone https://github.com/HariomYadav18/QuickAi.git
+cd QuickAi
 ```
 
-## 🌐 **System Architecture**
-
-```mermaid
-graph TB
-    User[User] --> Frontend[React 19 Frontend]
-    Frontend --> API[Express REST API]
-    API --> Auth[Clerk Auth]
-    API --> Payments[Razorpay]
-    API --> AI[OpenAI/Gemini APIs]
-    API --> Storage[Cloudinary]
-    API --> DB[PostgreSQL]
-    API --> Cache[Redis Cache]
-    Frontend --> WebSocket[Socket.IO Real-time]
+2. Install client dependencies:
+```console
+cd client && npm install
 ```
 
-## 🚀 **Quick Start**
-
-### **Prerequisites**
-```bash
-Node.js 20+
-PostgreSQL 16+
-MongoDB Atlas (optional hybrid)
-Redis (optional caching)
+3. Install server dependencies:
+```console
+cd ../server && npm install
 ```
 
-### **Clone & Install**
-```bash
-git clone https://github.com/HariomYadav18/quickai.git
-cd quickai
+### Environment Variables
 
-# Backend
-cd backend
-npm install
-cp .env.example .env
-npm run dev
-
-# Frontend (new terminal)
-cd ../frontend
-npm install
-npm run dev
-
+**Client (.env)**
+```console
+VITE_CLERK_PUBLISHABLE_KEY=pk_test_...
+VITE_API_BASE_URL=http://localhost:3000
 ```
 
-## 📚 **API Endpoints**
-
-| Method | Endpoint | Description | Auth |
-|--------|----------|-------------|------|
-| `POST` | `/api/generate/image` | Text-to-Image (DALL-E/Gemini) | ✅ |
-| `POST` | `/api/generate/content` | AI Content Generation | ✅ |
-| `POST` | `/api/analyze/resume` | Resume Analysis | ✅ |
-| `GET` | `/api/dashboard/stats` | Usage Analytics | ✅ |
-| `POST` | `/api/payments/create` | Razorpay Order | ✅ |
-
-## 🧪 **Performance Benchmarks**
-
-```
-PostgreSQL Queries: <100ms (95th percentile)
-API Response Time: 250ms avg
-Concurrent Users: 1000+ tested
-Lighthouse Score: 95+ (Performance)
-Image Generation: 3-8 seconds
+**Server (.env)**
+```env
+OPENAI_API_KEY=sk-your-openai-key
+CLOUDINARY_CLOUD_NAME=your-cloud-name
+CLOUDINARY_API_KEY=your-api-key
+CLOUDINARY_API_SECRET=your-api-secret
+DATABASE_URL=your-postgres-connection-string
+CLERK_SECRET_KEY=sk_test_...
+PORT=5000
 ```
 
-## 🔍 **Key Optimizations**
+4. Start the development servers:
+```console
+# Terminal 1 - Start backend
+cd server && npm run server
 
-1. **Database**: PostgreSQL indexes on `user_id`, `created_at`, `status`
-2. **Caching**: Redis for API responses (TTL: 5min)
-3. **Rate Limiting**: Express-rate-limit (100 req/min)
-4. **CDN**: Cloudinary for image delivery
-5. **WebSocket**: Socket.IO rooms for real-time updates
-
-## 📈 **Folder Structure**
-
-```
-quickai/
-├── backend/
-│   ├── controllers/     # API logic
-│   ├── middleware/      # Auth, validation
-│   ├── models/          # Prisma schema
-│   ├── routes/          # Express routes
-│   └── utils/           # Helpers
-├── frontend/
-│   ├── components/      # Reusable UI
-│   ├── hooks/           # Custom React hooks
-│   ├── pages/           # Page components
-│   └── services/        # API calls
-└── docs/                # Architecture, API docs
+# Terminal 2 - Start frontend
+cd client && npm run dev
 ```
 
-## 🐛 **Troubleshooting**
+---
 
-| Issue | Solution |
-|-------|----------|
-| `ECONNREFUSED` DB | Check `DATABASE_URL` + PostgreSQL running |
-| `Invalid API Key` | Verify OpenAI/Gemini keys in `.env` |
-| CORS errors | `npm run dev` both frontend/backend |
-| Rate limited | Check Redis connection or restart |
+## AI Capabilities
 
-## 🤝 **Contributing**
+### 🎨 Image Generation
+- Text-to-image conversion using DALL-E
+- Customizable image styles and sizes
+- High-resolution output
 
-1. Fork the repo
-2. Create feature branch: `git checkout -b feature/ai-enhancement`
-3. Commit changes: `git commit -m "Add: new AI model support"`
-4. Push: `git push origin feature/ai-enhancement`
-5. Open Pull Request
+### 🖼️ Image Editing
+- Background removal with precision
+- Object removal and cleanup
+- Batch processing support
 
-## 📄 **License**
-MIT License - Free to use, modify, distribute.
+### 📝 Content Creation
+- Article writing with tone control
+- Blog title generation
+- SEO optimization suggestions
 
-## 🙌 **Acknowledgements**
-- [OpenAI DALL-E 3](https://openai.com)
-- [Google Gemini API](https://ai.google)
-- [Vercel](https://vercel.com)
-- [Clerk](https://clerk.com)
-- [Razorpay](https://razorpay.com)
+---
 
-***
+## API Endpoints
 
-**Built with ❤️ by Hariom Yadav** | 💼 [LinkedIn](https://linkedin.com/in/HariomYadav18) | 🏫 VIT Bhopal University
+### AI Routes (`/api/ai`)
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| POST | `/generate-image` | Generate images from text |
+| POST | `/remove-background` | Remove image backgrounds |
+| POST | `/remove-object` | Remove objects from images |
+| POST | `/write-article` | Generate article content |
+| POST | `/generate-titles` | Create blog post titles |
+|
+
+### User Routes (`/api/users`)
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| GET | `/profile` | Get user profile |
+| POST | `/creations` | Save user creations |
+| GET | `/creations` | Get user's creations |
+| GET | `/community` | Get community creations |
+
+---
+
+## Deployment
+
+### Frontend (Vercel)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fyourusername%2FQuickAi%2Ftree%2Fmain%2Fclient)
+
+### Backend (Render/Vercel)
+Deploy with environment variables configured for:
+- Neon PostgreSQL database
+- OpenAI API keys
+- Cloudinary credentials
+- Clerk secrets
+
+### Database (Neon)
+```console
+# Recommended: Neon PostgreSQL
+https://neon.tech/
+```
+
+---
+
+## Performance
+
+- ⚡ Lighthouse Score: 95+
+- 📦 Optimized Bundle Size
+- 🚀 Fast AI Processing
+- 📱 Mobile Responsive
+- 🔒 Secure Authentication
+
+---
+
+## Contributing
+
+We welcome contributions! Please follow these steps:
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+---
+
+## License
+
+Distributed under the ISC License. See [`LICENSE`](https://github.com/HariomYadav18/QuickAi/blob/main/LICENSE) for more information.
+
+---
+
+## Support
+
+For support, email _hariomydv1844@gmail.com_ or create an issue in the GitHub repository.
+
+---
+
+## 📞 Contact
+For any questions or support, please contact:
+- [**Hariom Yadav**]👨🏿‍💻 | [Github](https://github.com/HariomYadav18) | [Linkedin](https://www.linkedin.com/in/hariomyadav18/) |.
+- **Email**: <hariomydv1844@gmail.com>
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/hariomyadav18/) [![@phenrysay] [![pH-7](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/HariomYadav18)
+
+---
 
 <div align="center">
-  <img src="https://img.shields.io/github/stars/HariomYadav18/quickai?style=social" alt="GitHub stars"/>
+
+**QUICKAI** - Supercharge your creativity with AI! 🚀
+
+*Built with ❤️ using the PERN stack and cutting-edge AI technologies.*
+
+**Made with ❤️ by <i> Hariom Yadav</i>**
+
+[⬆ Back to Top](#table-of-contents)
+
 </div>
 
-***
+
 
 *⭐ Star this repo if you found it helpful!*
